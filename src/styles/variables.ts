@@ -12,3 +12,5 @@ export const colors = {
 export const wrapperPadding = "1.3rem";
 
 export const borderRadiusItem = "0.5rem";
+
+export const boxSeparetion = "4.7rem";

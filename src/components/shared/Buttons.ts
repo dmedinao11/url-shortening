@@ -13,3 +13,8 @@ export const Button = styled.button<{ w100?: boolean; square?: boolean }>`
 	${(props) => props.w100 && "width: 100%;"}
 	${(props) => props.square && `border-radius: ${borderRadiusItem};`}
 `;
+
+export const CopyButton = styled(Button)`
+	border-radius: ${borderRadiusItem};
+	padding: 0.5rem 2rem;
+`;
