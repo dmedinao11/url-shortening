@@ -1,8 +1,16 @@
 import React from "react";
-import "./App.css";
+import Header from "./components/Header/Header";
+import Hero from "./components/Hero/Hero";
+import Links from "./components/Links/Links";
 
 function App() {
-	return <h1>Hello world!</h1>;
+	return (
+		<>
+			<Header></Header>
+			<Hero></Hero>
+			<Links></Links>
+		</>
+	);
 }
 
 export default App;
