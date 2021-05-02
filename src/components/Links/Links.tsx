@@ -31,6 +31,7 @@ const Links = () => {
 	const handleSubmit = (event: FormEvent) => {
 		event.preventDefault();
 		setIsShortenIt(true);
+		//TODO: Catch error
 		shortLink(userLink).then(() => setIsShortenIt(false));
 	};
 
@@ -42,8 +43,9 @@ const Links = () => {
 
 	const links = shorthenLinks.map((link, key) => (
 		<Link
-			originalLink={link.originalLink}
-			shorthenLink={link.shorthenLink}
+			original_link={link.original_link}
+			short_link={link.short_link}
+			full_short_link={link.full_short_link}
 			key={key}
 		/>
 	));

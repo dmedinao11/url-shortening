@@ -2,12 +2,12 @@ import axios from "axios";
 
 const url = "https://api.shrtco.de/v2/shorten";
 
-export interface IResponse {
+interface IResponse {
 	ok: boolean;
-	result: Result;
+	result: IResultDetail;
 }
 
-export interface Result {
+interface IResultDetail {
 	code: string;
 	short_link: string;
 	full_short_link: string;
@@ -20,10 +20,22 @@ export interface Result {
 	original_link: string;
 }
 
-//TODO: Filtrar lo necesario en el servicio
-//TODO: Catch error
-export const shortLink = (toShort = "https://www.google.com/?hl=es") => {
+export interface ILink {
+	short_link: string;
+	full_short_link: string;
+	original_link: string;
+}
+
+export const shortLink = (toShort: string) => {
 	return axios
 		.post<IResponse>(`${url}?url=${toShort}`)
-		.then(({ data }) => data.result);
+		.then(({ data }) => {
+			const result: ILink = {
+				short_link: data.result.short_link,
+				full_short_link: data.result.full_short_link,
+				original_link: data.result.original_link
+			};
+			return result;
+		})
+		.catch(() => null);
 };

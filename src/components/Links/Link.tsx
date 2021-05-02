@@ -1,20 +1,15 @@
 import React from "react";
+import { ILink } from "../../services/linkService";
 import { CopyButton } from "../shared/Buttons";
 import { LinkUrl, StyledLink } from "./LinksStyled";
 
-//TODO: Extraer esta interface
-export interface ILink {
-	originalLink: string;
-	shorthenLink: string;
-}
-
-const Link = ({ originalLink, shorthenLink }: ILink) => {
+const Link = ({ short_link, original_link }: ILink) => {
 	return (
 		<StyledLink>
 			{/* TODO: acortar longitud con un pipe */}
-			<LinkUrl>{originalLink}</LinkUrl>
+			<LinkUrl>{original_link}</LinkUrl>
 			<hr />
-			<LinkUrl shorten>{shorthenLink}</LinkUrl>
+			<LinkUrl shorten>{short_link}</LinkUrl>
 			<CopyButton square>Copy</CopyButton>
 		</StyledLink>
 	);
