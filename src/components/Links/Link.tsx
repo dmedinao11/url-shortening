@@ -2,12 +2,12 @@ import React from "react";
 import { CopyButton } from "../shared/Buttons";
 import { LinkUrl, StyledLink } from "./LinksStyled";
 
-interface IProps {
+export interface ILink {
 	originalLink: string;
 	shorthenLink: string;
 }
 
-const Link = ({ originalLink, shorthenLink }: IProps) => {
+const Link = ({ originalLink, shorthenLink }: ILink) => {
 	return (
 		<StyledLink>
 			<LinkUrl>{originalLink}</LinkUrl>

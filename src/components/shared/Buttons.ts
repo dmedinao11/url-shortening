@@ -9,6 +9,7 @@ export const Button = styled.button<{ w100?: boolean; square?: boolean }>`
 	border-radius: 2rem;
 	font-weight: 700;
 	border: none;
+	cursor: pointer;
 
 	${(props) => props.w100 && "width: 100%;"}
 	${(props) => props.square && `border-radius: ${borderRadiusItem};`}
