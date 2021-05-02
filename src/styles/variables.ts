@@ -6,7 +6,8 @@ export const colors = {
 	GrayishViolet: "hsl(257, 7%, 63%)",
 	VeryDarkBlue: "hsl(255, 11%, 22%)",
 	VeryDarkViolet: "hsl(260, 8%, 14%)",
-	BgWrapper: "#f0f1f6"
+	BgWrapper: "#f0f1f6",
+	LightCyan: "#9be3e2"
 };
 
 export const wrapperPadding = "1.3rem";

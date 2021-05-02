@@ -6,6 +6,9 @@ import Header from "./components/Header/Header";
 import Hero from "./components/Hero/Hero";
 import Links from "./components/Links/Links";
 
+//TODO: Animaciones generales
+//TODO: Versión desktop
+
 function App() {
 	return (
 		<>

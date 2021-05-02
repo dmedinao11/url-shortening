@@ -21,16 +21,41 @@ export const LinksShorter = styled.div`
 	border-radius: ${borderRadiusItem};
 `;
 
-export const LinkInput = styled.input`
+export const LinkField = styled.div`
+	width: 100%;
 	margin-bottom: ${wrapperPadding};
+	background-color: white;
+	padding: 0.8rem ${wrapperPadding};
 	border-radius: ${borderRadiusItem};
 	font-size: 1.2rem;
-	padding: 0.8rem ${wrapperPadding};
-	width: 100%;
+	display: flex;
+	justify-content: space-between;
+
+	& * {
+		color: ${colors.VeryDarkViolet};
+	}
+
+	&:hover i {
+		display: inline;
+	}
+`;
+
+export const LinkInput = styled.input`
 	border: none;
+	max-width: 90%;
+	font-size: 1.2rem;
 
 	&:focus-visible {
 		outline: none;
+	}
+`;
+
+export const LinkFieldButton = styled.i`
+	display: none;
+	cursor: pointer;
+	margin: auto 0;
+	&:hover {
+		color: ${colors.Cyan};
 	}
 `;
 

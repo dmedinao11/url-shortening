@@ -11,6 +11,11 @@ export const Button = styled.button<{ w100?: boolean; square?: boolean }>`
 	border: none;
 	cursor: pointer;
 
+	&:hover,
+	&:disabled {
+		background-color: ${colors.LightCyan};
+	}
+
 	${(props) => props.w100 && "width: 100%;"}
 	${(props) => props.square && `border-radius: ${borderRadiusItem};`}
 `;

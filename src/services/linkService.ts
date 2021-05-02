@@ -20,6 +20,8 @@ export interface Result {
 	original_link: string;
 }
 
+//TODO: Filtrar lo necesario en el servicio
+//TODO: Catch error
 export const shortLink = (toShort = "https://www.google.com/?hl=es") => {
 	return axios
 		.post<IResponse>(`${url}?url=${toShort}`)
