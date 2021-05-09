@@ -1,16 +1,31 @@
-import React from "react";
+import React, { useState } from "react";
 import { ILink } from "../../services/linkService";
 import { CopyButton } from "../shared/Buttons";
-import { LinkUrl, StyledLink } from "./LinksStyled";
+import { LinkError, LinkUrl, StyledLink } from "./LinksStyled";
 
-const Link = ({ short_link, original_link }: ILink) => {
+const Link = ({ short_link, original_link, full_short_link }: ILink) => {
+	const [flags, setFlags] = useState({ isCopied: false, hasCopyError: false });
+
+	const handleCopyClick = async () => {
+		try {
+			await navigator.clipboard.writeText(full_short_link);
+			setFlags({ hasCopyError: false, isCopied: true });
+		} catch (error) {
+			setFlags({ isCopied: false, hasCopyError: true });
+		}
+	};
+
 	return (
 		<StyledLink>
-			{/* TODO: acortar longitud con un pipe */}
 			<LinkUrl>{original_link}</LinkUrl>
 			<hr />
 			<LinkUrl shorten>{short_link}</LinkUrl>
-			<CopyButton square>Copy</CopyButton>
+			<CopyButton onClick={handleCopyClick} copy={flags.isCopied} square>
+				{flags.isCopied ? "Copied!" : "Copy"}
+			</CopyButton>
+			{flags.hasCopyError && (
+				<LinkError>Link could not set on clipboard</LinkError>
+			)}
 		</StyledLink>
 	);
 };

@@ -20,7 +20,8 @@ export const Button = styled.button<{ w100?: boolean; square?: boolean }>`
 	${(props) => props.square && `border-radius: ${borderRadiusItem};`}
 `;
 
-export const CopyButton = styled(Button)`
+export const CopyButton = styled(Button)<{ copy: boolean }>`
 	border-radius: ${borderRadiusItem};
 	padding: 0.5rem 2rem;
+	${(props) => props.copy && `background-color: ${colors.DarkViolet};`}
 `;

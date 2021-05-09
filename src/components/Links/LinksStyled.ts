@@ -21,9 +21,12 @@ export const LinksShorter = styled.div`
 	border-radius: ${borderRadiusItem};
 `;
 
-export const LinkField = styled.div`
-	width: 100%;
+export const LinkInputWrapper = styled.div`
 	margin-bottom: ${wrapperPadding};
+`;
+
+export const LinkField = styled.div<{ invalid: boolean }>`
+	width: 100%;
 	background-color: white;
 	padding: 0.8rem ${wrapperPadding};
 	border-radius: ${borderRadiusItem};
@@ -31,8 +34,17 @@ export const LinkField = styled.div`
 	display: flex;
 	justify-content: space-between;
 
+	${(props) => props.invalid && `border: 2px solid ${colors.Red};`}
+
 	& * {
-		color: ${colors.VeryDarkViolet};
+		color: ${(props) =>
+			props.invalid ? `${colors.Red}` : `${colors.VeryDarkViolet}`};
+	}
+
+	& * {
+		&::placeholder {
+			color: ${(props) => (props.invalid ? `${colors.Red}` : "gray")};
+		}
 	}
 
 	&:hover i {
@@ -48,6 +60,12 @@ export const LinkInput = styled.input`
 	&:focus-visible {
 		outline: none;
 	}
+`;
+
+export const LinkError = styled.span`
+	color: ${colors.Red};
+	font-style: italic;
+	font-size: 0.9rem;
 `;
 
 export const LinkFieldButton = styled.i`
@@ -79,6 +97,10 @@ export const StyledLink = styled.li`
 export const LinkUrl = styled.p<{ shorten?: boolean }>`
 	font-size: 1.2rem;
 	color: ${colors.DarkViolet};
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+	cursor: default;
 
 	${(props) => props.shorten && `color: ${colors.Cyan};`}
 `;
