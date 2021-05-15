@@ -6,14 +6,15 @@ import {
 	FooterSectionTitle,
 	Social,
 	SocialLogo,
-	StyledFooter
+	StyledFooter,
+	Sections
 } from "./FooterStyled";
 
 const Footer = () => {
 	return (
 		<StyledFooter>
 			<Title2 white>Shortly</Title2>
-			<div>
+			<Sections>
 				<div>
 					<FooterSectionTitle>Features</FooterSectionTitle>
 					<FooterLink>Link Shortening</FooterLink>
@@ -33,7 +34,7 @@ const Footer = () => {
 					<FooterLink>Careers</FooterLink>
 					<FooterLink>Contact</FooterLink>
 				</div>
-			</div>
+			</Sections>
 			<Social>
 				<SocialLogo className="fab fa-facebook-square" />
 				<SocialLogo className="fab fa-twitter" />

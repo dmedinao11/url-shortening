@@ -8,6 +8,16 @@ import {
 
 export const FeaturesHead = styled.div`
 	margin-bottom: ${boxSeparetion};
+
+	@media (min-width: 800px) {
+		max-width: 30rem;
+		margin: auto;
+		margin-bottom: 6rem;
+
+		& h1 {
+			font-size: 2.5rem;
+		}
+	}
 `;
 
 export const FeaturesContainer = styled.section`
@@ -15,7 +25,13 @@ export const FeaturesContainer = styled.section`
 	flex-direction: column;
 	gap: ${boxSeparetion};
 	position: relative;
-	margin-bottom: ${boxSeparetion};
+	margin-bottom: calc(${boxSeparetion} + 5.5rem);
+
+	@media (min-width: 800px) {
+		flex-direction: row;
+		gap: unset;
+		justify-content: space-between;
+	}
 `;
 
 export const StyledFeature = styled.article`
@@ -25,6 +41,34 @@ export const StyledFeature = styled.article`
 	padding-top: 4rem;
 	position: relative;
 	z-index: 1;
+
+	@media (min-width: 800px) {
+		padding: 1.4rem;
+		padding-top: 4rem;
+		max-width: 19.4rem;
+		margin-right: 1.5rem;
+
+		& * {
+			text-align: start;
+		}
+
+		& h1 {
+			font-size: 1.25rem;
+		}
+
+		& p {
+			font-size: 1rem;
+		}
+
+		&:nth-child(2) {
+			top: 2.75rem;
+		}
+
+		&:nth-child(3) {
+			top: 5.5rem;
+			margin-right: 0;
+		}
+	}
 `;
 
 export const FeatureIcon = styled.div`
@@ -40,6 +84,10 @@ export const FeatureIcon = styled.div`
 	& img {
 		width: 2.5rem;
 	}
+
+	@media (min-width: 800px) {
+		left: ${wrapperPadding};
+	}
 `;
 
 export const VerticalLine = styled.div`
@@ -48,4 +96,11 @@ export const VerticalLine = styled.div`
 	background-color: ${colors.Cyan};
 	position: absolute;
 	left: calc(50% - 0.15rem);
+
+	@media (min-width: 800px) {
+		height: 0.6rem;
+		width: 100%;
+		left: unset;
+		top: calc(50% - 0.15rem);
+	}
 `;

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { ILink } from "../../services/linkService";
+import { animePrefix } from "../../styles/variables";
 import { CopyButton } from "../shared/Buttons";
 import { LinkError, LinkUrl, StyledLink } from "./LinksStyled";
 
@@ -16,10 +17,11 @@ const Link = ({ short_link, original_link, full_short_link }: ILink) => {
 	};
 
 	return (
-		<StyledLink>
+		<StyledLink className={`${animePrefix}animated ${animePrefix}backInDown`}>
 			<LinkUrl>{original_link}</LinkUrl>
 			<hr />
 			<LinkUrl shorten>{short_link}</LinkUrl>
+
 			<CopyButton onClick={handleCopyClick} copy={flags.isCopied} square>
 				{flags.isCopied ? "Copied!" : "Copy"}
 			</CopyButton>

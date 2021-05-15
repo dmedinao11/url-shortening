@@ -12,6 +12,10 @@ export const colors = {
 
 export const wrapperPadding = "1.3rem";
 
+export const wrapperPaddingDesk = "6.5rem";
+
 export const borderRadiusItem = "0.5rem";
 
 export const boxSeparetion = "4.7rem";
+
+export const animePrefix = "animate__";

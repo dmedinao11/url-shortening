@@ -1,46 +1,77 @@
-# Getting Started with Create React App
+# Shortly, acortador de url's
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+_Reto 'URL shortening API landing page' propuesto en
+[Frontendmentor.io](https://www.frontendmentor.io/challenges/url-shortening-api-landing-page-2ce3ob-G)_
 
-## Available Scripts
+_Mira [aquí](https://dmedinao11.github.io/url-shortening/) la aplicación
+final._
 
-In the project directory, you can run:
+## Previsualización 👀
 
-### `npm start`
+### Escritorio 🖥
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+![Desktop vista](https://raw.githubusercontent.com/dmedinao11/url-shortening/master/preview/desktop1.png)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+![Desktop vista](https://raw.githubusercontent.com/dmedinao11/url-shortening/master/preview/desktop2.png)
 
-### `npm test`
+### Móvil 📱
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<p align="center">
+  <img src="https://raw.githubusercontent.com/dmedinao11/url-shortening/master/preview/mobile1.png" alt="Mobile vista"/>
+</p>
 
-### `npm run build`
+<p align="center">
+  <img src="https://raw.githubusercontent.com/dmedinao11/url-shortening/master/preview/mobile2.png" alt="Mobile vista"/>
+</p>
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Características ⭐
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Acortar y listar urls
+- Llamadas a una REST - API
+- Animaciones
+- Validaciones
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Comenzando 🚀
 
-### `npm run eject`
+_Estas instrucciones te permitirán obtener una copia del proyecto en funcionamiento en tu
+máquina local para propósitos de desarrollo y pruebas._
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### Instalación 🔧
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+_Paso a paso para ejecutar el proyecto desde tu computadora_
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+_Clona el repositorio_
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+```
+git clone https://github.com/dmedinao11/url-shortening
+```
 
-## Learn More
+_Abre la carpeta e instala las dependencias_
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```
+cd url-shortening
+npm i
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+_Ejecuta el servidor de desarrollo_
+
+```
+npm start
+```
+
+_Abre en tu navegador http://localhost:3000/ y listo!_
+
+## Construido con 🛠️
+
+- [React JS](https://es.reactjs.org/) - Librería en el frontend
+- [shrtco](https://shrtco.de/) - API gratuita para acortar links
+- [Animate.css](https://animate.style/) - Librería de CSS para el uso de animaciones
+- [axios](https://axios-http.com/) - Librería basada en promesas para realizar peticiones http
+
+## Autor ✒️
+
+- **Daniel Medina** - _Desarrollo_ - [dmedinao11](https://github.com/dmedinao11)
+
+---
+
+⌨️ con ❤️ por [dmedinao11](https://github.com/dmedinao11) 😊

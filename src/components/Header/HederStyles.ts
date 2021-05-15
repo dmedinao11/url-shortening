@@ -7,6 +7,11 @@ export const StyledHeader = styled.nav`
 	justify-content: space-between;
 	margin-top: 2rem;
 	margin-bottom: 1.8rem;
+
+	@media (min-width: 800px) {
+		justify-content: start;
+		margin-bottom: 2.8rem;
+	}
 `;
 
 const menuLineHeight = 3;
@@ -27,6 +32,10 @@ export const MenuButton = styled.div`
 		width: 100%;
 		background-color: ${colors.GrayishViolet};
 	}
+
+	@media (min-width: 800px) {
+		display: none;
+	}
 `;
 
 export const Menu = styled("ul")<{ show: boolean }>`
@@ -39,10 +48,8 @@ export const Menu = styled("ul")<{ show: boolean }>`
 	display: ${(props) => (props.show ? "block" : "none")};
 	padding: 1.8rem ${wrapperPadding};
 	z-index: 1;
-
-	& li {
-		margin: 1.8rem 0;
-	}
+	animation: bounceInDown;
+	animation-duration: 1s;
 
 	& li:first-of-type {
 		margin-top: 0;
@@ -52,17 +59,60 @@ export const Menu = styled("ul")<{ show: boolean }>`
 		border: none;
 		height: 0.1px;
 		background: rgba(256, 256, 256, 0.1);
+		margin-bottom: 1.8rem;
+
+		@media (min-width: 800px) {
+			display: none;
+		}
+	}
+
+	@media (min-width: 800px) {
+		display: flex;
+		position: relative;
+		right: unset;
+		left: unset;
+		top: unset;
+		background-color: unset;
+		width: 100%;
+		padding: 1rem 0;
+		animation: unset;
 	}
 `;
 
-export const NavItem = styled("li")<{ mobile: boolean }>`
+export const MenuSection = styled.div`
+	@media (min-width: 800px) {
+		display: flex;
+		align-items: center;
+
+		&:last-of-type {
+			margin-left: auto;
+		}
+	}
+`;
+
+export const NavItem = styled("li")`
 	text-align: center;
 	list-style: none;
 	cursor: pointer;
 	color: white;
 	font-weight: 700;
+	margin: 1.8rem 0;
+
+	&:first-of-type {
+		margin-top: 0;
+	}
 
 	&:hover {
 		color: ${colors.Cyan};
+	}
+
+	@media (min-width: 800px) {
+		color: ${colors.GrayishViolet};
+		margin: 0 1rem;
+		font-size: 1rem;
+
+		&:first-of-type {
+			margin-left: 2rem;
+		}
 	}
 `;

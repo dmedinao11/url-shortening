@@ -6,6 +6,7 @@ import {
 	wrapperPadding
 } from "../../styles/variables";
 import bgMobile from "../../assets/bg-shorten-mobile.svg";
+import bgDesk from "../../assets/bg-shorten-desktop.svg";
 
 export const LinksWrapper = styled.section`
 	display: flex;
@@ -19,10 +20,28 @@ export const LinksShorter = styled.div`
 	background: ${colors.DarkViolet} url(${bgMobile}) no-repeat;
 	background-position: 100% 0%;
 	border-radius: ${borderRadiusItem};
+
+	@media (min-width: 800px) {
+		background: ${colors.DarkViolet} url(${bgDesk}) no-repeat;
+		background-size: cover;
+		display: flex;
+		padding: 3.6rem;
+		gap: 1rem;
+		align-items: center;
+
+		& button {
+			width: auto;
+			min-width: 180px;
+		}
+	}
 `;
 
 export const LinkInputWrapper = styled.div`
 	margin-bottom: ${wrapperPadding};
+	@media (min-width: 800px) {
+		margin-bottom: 0;
+		width: 80%;
+	}
 `;
 
 export const LinkField = styled.div<{ invalid: boolean }>`
@@ -34,7 +53,8 @@ export const LinkField = styled.div<{ invalid: boolean }>`
 	display: flex;
 	justify-content: space-between;
 
-	${(props) => props.invalid && `border: 2px solid ${colors.Red};`}
+	${(props) =>
+		props.invalid && `border: 2px solid ${colors.Red}; margin: -4px 0;`}
 
 	& * {
 		color: ${(props) =>
@@ -60,12 +80,23 @@ export const LinkInput = styled.input`
 	&:focus-visible {
 		outline: none;
 	}
+
+	@media (min-width: 800px) {
+		width: 100%;
+		max-width: unset;
+		margin-right: 0.5rem;
+	}
 `;
 
 export const LinkError = styled.span`
 	color: ${colors.Red};
 	font-style: italic;
 	font-size: 0.9rem;
+
+	@media (min-width: 800px) {
+		position: absolute;
+		transform: translateY(10px);
+	}
 `;
 
 export const LinkFieldButton = styled.i`
@@ -91,6 +122,16 @@ export const StyledLink = styled.li`
 		height: 1px;
 		background-color: ${colors.Gray};
 		margin: 0 -1rem;
+
+		@media (min-width: 800px) {
+			display: none;
+		}
+	}
+
+	@media (min-width: 800px) {
+		flex-direction: row;
+		padding: 1rem 1.5rem;
+		align-items: center;
 	}
 `;
 
@@ -103,4 +144,12 @@ export const LinkUrl = styled.p<{ shorten?: boolean }>`
 	cursor: default;
 
 	${(props) => props.shorten && `color: ${colors.Cyan};`}
+
+	@media (min-width: 800px) {
+		min-width: 200px;
+
+		&:first-of-type {
+			margin-right: auto;
+		}
+	}
 `;
