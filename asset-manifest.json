@@ -1,0 +1,34 @@
+{
+  "files": {
+    "main.css": "/url-shortening/static/css/main.c19153ff.chunk.css",
+    "main.js": "/url-shortening/static/js/main.aeca2768.chunk.js",
+    "main.js.map": "/url-shortening/static/js/main.aeca2768.chunk.js.map",
+    "runtime-main.js": "/url-shortening/static/js/runtime-main.f58b5d1b.js",
+    "runtime-main.js.map": "/url-shortening/static/js/runtime-main.f58b5d1b.js.map",
+    "static/css/2.a1596f27.chunk.css": "/url-shortening/static/css/2.a1596f27.chunk.css",
+    "static/js/2.1a9f8f2f.chunk.js": "/url-shortening/static/js/2.1a9f8f2f.chunk.js",
+    "static/js/2.1a9f8f2f.chunk.js.map": "/url-shortening/static/js/2.1a9f8f2f.chunk.js.map",
+    "static/js/3.74375726.chunk.js": "/url-shortening/static/js/3.74375726.chunk.js",
+    "static/js/3.74375726.chunk.js.map": "/url-shortening/static/js/3.74375726.chunk.js.map",
+    "index.html": "/url-shortening/index.html",
+    "static/css/2.a1596f27.chunk.css.map": "/url-shortening/static/css/2.a1596f27.chunk.css.map",
+    "static/css/main.c19153ff.chunk.css.map": "/url-shortening/static/css/main.c19153ff.chunk.css.map",
+    "static/js/2.1a9f8f2f.chunk.js.LICENSE.txt": "/url-shortening/static/js/2.1a9f8f2f.chunk.js.LICENSE.txt",
+    "static/media/bg-boost-desktop.772154c9.svg": "/url-shortening/static/media/bg-boost-desktop.772154c9.svg",
+    "static/media/bg-boost-mobile.4b04bd89.svg": "/url-shortening/static/media/bg-boost-mobile.4b04bd89.svg",
+    "static/media/bg-shorten-desktop.0d9742f4.svg": "/url-shortening/static/media/bg-shorten-desktop.0d9742f4.svg",
+    "static/media/bg-shorten-mobile.41c34b33.svg": "/url-shortening/static/media/bg-shorten-mobile.41c34b33.svg",
+    "static/media/icon-brand-recognition.c349d3b6.svg": "/url-shortening/static/media/icon-brand-recognition.c349d3b6.svg",
+    "static/media/icon-detailed-records.265c8aea.svg": "/url-shortening/static/media/icon-detailed-records.265c8aea.svg",
+    "static/media/icon-fully-customizable.a1532a74.svg": "/url-shortening/static/media/icon-fully-customizable.a1532a74.svg",
+    "static/media/illustration-working.c9b5ef54.svg": "/url-shortening/static/media/illustration-working.c9b5ef54.svg",
+    "static/media/logo.83464303.svg": "/url-shortening/static/media/logo.83464303.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.f58b5d1b.js",
+    "static/css/2.a1596f27.chunk.css",
+    "static/js/2.1a9f8f2f.chunk.js",
+    "static/css/main.c19153ff.chunk.css",
+    "static/js/main.aeca2768.chunk.js"
+  ]
+}
