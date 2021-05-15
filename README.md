@@ -27,6 +27,7 @@ final._
 ## Características ⭐
 
 - Acortar y listar urls
+- Styled components
 - Llamadas a una REST - API
 - Animaciones
 - Validaciones
@@ -65,6 +66,7 @@ _Abre en tu navegador http://localhost:3000/ y listo!_
 
 - [React JS](https://es.reactjs.org/) - Librería en el frontend
 - [shrtco](https://shrtco.de/) - API gratuita para acortar links
+- [Styled components](https://styled-components.com/) - Libreria para crear componentes estilizados
 - [Animate.css](https://animate.style/) - Librería de CSS para el uso de animaciones
 - [axios](https://axios-http.com/) - Librería basada en promesas para realizar peticiones http
 
